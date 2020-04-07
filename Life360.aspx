@@ -1,0 +1,613 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Life360.aspx.vb" Inherits="Life360" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>Luciana Imoveis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css\animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css\bootstrap-submenu.css"/>
+    <link rel="stylesheet" type="text/css" href="css\bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="css\leaflet.css" type="text/css"/>
+    <link rel="stylesheet" href="css\map.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="fonts\font-awesome\css\font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts\flaticon\font\flaticon.css"/>
+    <link rel="stylesheet" type="text/css" href="fonts\linearicons\style.css"/>
+    <link rel="stylesheet" type="text/css" href="css\jquery.mCustomScrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css\dropzone.css"/>
+    <link rel="stylesheet" type="text/css" href="css\slick.css"/>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css\style.css"/>
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="css\skins\default.css"/>
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="img\favicon.ico" type="image/x-icon"/>
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700"/>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="css\ie10-viewport-bug-workaround.css"/>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js\ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script  src="js/html5shiv.min.js"></script>
+    <script  src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+           
+<div class="page_loader"></div>
+
+<!-- Top header start -->
+<header class="top-header top-header-bg d-none d-xl-block d-lg-block d-md-block" id="top-header-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-7">
+                <div class="list-inline">
+                    <a href="tel:+552199575-8892"><i class="fa fa-phone"></i>Fale Conosco: +552199575-8892</a>
+                    <a href="tel:lubroque@gmail.com"><i class="fa fa-envelope"></i>lubroque@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-5">
+                <ul class="top-social-media pull-right">
+                    <li>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="rss"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Top header end -->
+
+<!-- Main header start -->
+<header class="main-header">
+    <div class="container">
+       
+    </div>
+</header>
+<!-- Main header end -->
+
+<!-- Sub banner start -->
+<div class="sub-bannerLife">
+    <div class="container">
+        <div class="page-name">
+          
+        </div>
+    </div>
+ 
+</div>
+<!-- Sub Banner end -->
+
+<!-- Properties details page start -->
+<div class="properties-details-page content-area-6">
+    <div class="container">
+        <div class="row">  
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <div class="properties-details-section">
+                    <div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-40">
+                        <!-- Heading properties start -->
+                        <div class="heading-properties-2">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="pull-left">
+                                        <h3>Life 360</h3>
+                                        <p><i class="fa fa-map-marker"></i> Estr. do Bananal, 360 - Freguesia de Jacarepaguá</p>
+                                    </div>
+                                    <div class="pull-right">
+                                       
+                                        <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Heading properties end -->
+
+                        <!-- main slider carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item carousel-item" data-slide-number="0">
+                                <img src="img\empreendimentos\Life360-destaques\1.jpg" class="img-fluid" alt="slider-properties">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="1">
+                                <img src="img\empreendimentos\Life360-destaques\2.jpg" class="img-fluid" alt="slider-properties">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="2">
+                                <img src="img\empreendimentos\Life360-destaques\3.jpg" class="img-fluid" alt="slider-properties">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="4">
+                                <img src="img\empreendimentos\Life360-destaques\4.jpg" class="img-fluid" alt="slider-properties">
+                            </div>
+                            <div class="item carousel-item" data-slide-number="5">
+                                <img src="img\empreendimentos\Life360-destaques\5.jpg" class="img-fluid" alt="slider-properties">
+                            </div>
+
+                            <a class="carousel-control left" href="#propertiesDetailsSlider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                            <a class="carousel-control right" href="#propertiesDetailsSlider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+
+                        </div>
+                        <!-- main slider carousel nav controls -->
+                        <ul class="carousel-indicators smail-properties list-inline nav nav-justified">
+                            <li class="list-inline-item active">
+                                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#propertiesDetailsSlider">
+                                    <img src="img\empreendimentos\Life360-destaques\1.jpg" class="img-fluid" alt="properties-small">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-1" data-slide-to="1" data-target="#propertiesDetailsSlider">
+                                    <img src="img\empreendimentos\Life360-destaques\2.jpg" class="img-fluid" alt="properties-small">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-2" data-slide-to="2" data-target="#propertiesDetailsSlider">
+                                    <img src="img\empreendimentos\Life360-destaques\3.jpg" class="img-fluid" alt="properties-small">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-3" data-slide-to="3" data-target="#propertiesDetailsSlider">
+                                    <img src="img\empreendimentos\Life360-destaques\4.jpg" class="img-fluid" alt="properties-small">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-4" data-slide-to="4" data-target="#propertiesDetailsSlider">
+                                    <img src="img\empreendimentos\Life360-destaques\5.jpg" class="img-fluid" alt="properties-small">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Property meta start -->
+                    <div class="property-meta mb-40">
+                        <ul>
+                            <li>
+                                <i class="flaticon-furniture"></i>
+                                <p>2 e 3  quartos</p>
+                            </li>
+                            <li>
+                                <i class="flaticon-holidays"></i>
+                                <p>2 e 3 Banheiros</p>
+                            </li>
+                            <li>
+                                <i class="flaticon-square"></i>
+                                <p>62 a 164 m²</p>
+                            </li>
+                            <li>
+                                <i class="flaticon-vehicle"></i>
+                                <p>1 Vaga</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Property meta end -->
+
+                  
+
+                    <!-- Tabbing box start -->
+                    <div class="tabbing tabbing-box mb-40">
+                        <ul class="nav nav-tabs" id="carTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="false">Descrição</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="two" aria-selected="false">Planta</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" id="4-tab" data-toggle="tab" href="#4" role="tab" aria-controls="4" aria-selected="true">Video</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="5-tab" data-toggle="tab" href="#5" role="tab" aria-controls="5" aria-selected="true">Localização</a>
+                            </li>
+                          
+                        </ul>
+                        <div class="tab-content" id="carTabContent">
+                            <div class="tab-pane fade active show" id="one" role="tabpanel" aria-labelledby="one-tab">
+                                <div class="properties-description mb-50">
+                                    <h3 class="heading-2">
+                                        Descrição
+                                    </h3>
+                                    <p>Eleve seus padrões de qualidade e sofisticação com o Life 360 Residences. </p>
+
+                                    <p>Utilizando materiais de primeira qualidade, das mais renomadas marcas, este projeto foi minuciosamente planejado para atualizar seus conceitos de conveniência e bem estar, levando mais requinte e conforto à sua família
+
+                                        </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="two-tab">
+                                <div class="floor-plans mb-50">
+                                    <h3 class="heading-2">Planta Empreendimento</h3>
+                                    <table>
+                                        <tbody><tr>
+                                            <td><strong>Tamanho</strong></td>
+                                            <td><strong>Quartos</strong></td>
+                                            <td><strong>Banheiros</strong></td>
+                                            <td><strong>Vagas</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>62,30</td>
+                                            <td>2 </td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <img src="img\empreendimentos\Life360-destaques\plant.jpg" alt="floor-plans" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="three" role="tabpanel" aria-labelledby="three-tab">
+                            
+                            </div>
+                            <div class="tab-pane fade " id="4" role="tabpanel" aria-labelledby="4-tab">
+                                <div class="inside-properties mb-50">
+                                    <h3 class="heading-2">
+                                         Video
+                                    </h3>
+                                    <iframe src="https://www.youtube.com/embed/jw-vZ8L91qo" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="5" role="tabpanel" aria-labelledby="5-tab">
+                                <div class="location mb-50">
+                                    <div class="map">
+                                        <h3 class="heading-2">Localização</h3>
+                                        <div id="map" class="contact-map"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="6" role="tabpanel" aria-labelledby="6-tab">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="properties-condition mb-40">
+                            <h3 class="heading-2">
+                                Ficha Tecnica 
+                            </h3>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <ul class="condition">
+                                        <li>
+                                            <i class="flaticon-furniture"></i>2 e 3  Quartos
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-holidays"></i>Banheiro
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <ul class="condition">
+                                        <li>
+                                            <i class="flaticon-square"></i>62 a 164 m²
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <ul class="condition">
+                                        <li>
+                                            <i class="flaticon-vehicle"></i>1 Vaga
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Properties condition end -->
+                        <!-- Properties amenities start -->
+                        <div class="properties-amenities mb-40">
+                            <h3 class="heading-2">
+                                Caracteristicas
+                            </h3>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <ul class="amenities">
+                                     
+                                        <li>
+                                            <i class="flaticon-window"></i>Salão Gourmet
+                                        </li>
+                                     <li>
+                                            <i class="flaticon-holidays-1"></i>Salão de Festa
+                                        </li>
+                                       <li>
+                                        <i class="flaticon-technology"></i>Preparação Split
+                                    </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <ul class="amenities">
+                                        <li>
+                                            <i class="flaticon-beach"></i>Piscina
+                                        </li>
+                                        
+                                         <li>
+                                            <i class="flaticon-people-2"></i>Fitness
+                                        </li>
+                                         <li>
+                                            <i class="flaticon-people-3"></i>Deck Molhado
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <ul class="amenities">
+                                      
+                                        <li>
+                                            <i class="flaticon-lock"></i>Segurança  
+                                        </li>
+                                    <li>
+                                            <i class="flaticon-window"></i>Certificado AQUA  
+                                        </li>
+                                    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    <!-- Comments start -->
+                  
+                    <!-- Comments end -->
+
+                    <!-- Contact 1 start -->
+                    <%--<div class="contact-1 mtb-50">
+                        <h3 class="heading">Contact Form</h3>
+                        <form action="#" method="GET" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group name">
+                                        <input type="text" name="name" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group email">
+                                        <input type="email" name="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group subject">
+                                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group number">
+                                        <input type="text" name="phone" class="form-control" placeholder="Number">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group message">
+                                        <textarea class="form-control" name="message" placeholder="Write message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="send-btn">
+                                        <button type="submit" class="btn btn-md button-theme">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>--%>
+                    <asp:HiddenField ID="hdnOrigem" runat="server" />
+                  <div class="col-lg-12 col-md-12">
+                         <div class="sidebar-right">
+                            <!-- Search contents sidebar start -->
+                            <div class="widget search-area d-none d-xl-block d-lg-block">
+                                <h3 class="sidebar-title">FALE CONOSCO</h3>
+                                <div>
+                                  
+                                        </div>
+                                          <div>
+                                <div class="form-group">
+             
+                                     <asp:TextBox ID="tnome" runat="server" CssClass="form-control search-fields" placeholder="Nome*" title="O campo Nome deve ser preenchido"/>
+                                </div>
+                                  <div class="form-group">
+             
+                                     <asp:TextBox ID="tTelefone" runat="server" CssClass="form-control search-fields" placeholder="Telefone*" title="O campo Telefone deve ser preenchido"/>
+                                </div>
+                                  <div class="form-group">
+             
+                                     <asp:TextBox ID="tEmail" runat="server" CssClass="form-control search-fields" placeholder="Email*" title="O campo Telefone deve ser preenchido"/>
+                                </div>
+                               <div class="form-group">
+             
+                                     <asp:TextBox ID="tMensagem" runat="server" CssClass="form-control search-fields" placeholder="Mensagem*" title="O campo Telefone deve ser preenchido"/>
+                                </div>
+                               
+                           
+                                <div class="form-group mb-0">
+                                  
+                                     <asp:linkbutton runat="server" id="btnSend" type="submit" class="search-button" >Faça sua pré reserva</asp:linkbutton>
+                                </div>
+                            </div>
+                             </div>
+                              <div class=" widget-2 bg-grea-2 d-lg-none d-xl-none">
+                                <h3 class="sidebar-title">FALE CONOSCO</h3>
+                                <div>
+                                  
+                                        </div>
+                                          <div>
+                                <div class="form-group">
+             
+                                     <asp:TextBox ID="tnome3" runat="server" CssClass="form-control search-fields" placeholder="Nome*" title="O campo Nome deve ser preenchido"/>
+                                </div>
+                                  <div class="form-group">
+             
+                                     <asp:TextBox ID="tTelefone3" runat="server" CssClass="form-control search-fields" placeholder="Telefone*" title="O campo Telefone deve ser preenchido"/>
+                                </div>
+                                  <div class="form-group">
+             
+                                     <asp:TextBox ID="tEmail3" runat="server" CssClass="form-control search-fields" placeholder="Email*" title="O campo Telefone deve ser preenchido"/>
+                                </div>
+                               <div class="form-group">
+             
+                                     <asp:TextBox ID="tMensagem3" runat="server" CssClass="form-control search-fields" placeholder="Mensagem*" title="O campo Telefone deve ser preenchido"/>
+                                </div>
+                               
+                           
+                                <div class="form-group mb-0">
+                                  
+                                     <asp:linkbutton runat="server" id="btnSend3" type="submit" class="search-button" >Faça sua pré reserva</asp:linkbutton>
+                                </div>
+                            </div>
+                             </div>
+                                    </div>
+                      
+                </div>
+                    <!-- Contact 1 end -->
+
+                </div>
+            </div>
+       
+        </div>
+    </div>
+</div>
+<!-- Properties details page end -->
+
+<!-- Footer start -->
+<footer class="footer">
+    <div class="container footer-inner">
+
+
+        <div class="row">
+            <div class="col-xl-12">
+                <p class="copy">© 2017 <a href="#">Theme Vessel.</a> Trademarks and brands are the property of their respective owners.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer end -->
+
+<!-- Full Page Search -->
+<div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="index.html#">
+        <input type="search" value="" placeholder="type keyword(s) here">
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div>
+
+<script src="js\jquery-2.2.0.min.js"></script>
+<script src="js\popper.min.js"></script>
+<script src="js\bootstrap.min.js"></script>
+<script src="js\bootstrap-submenu.js"></script>
+<script src="js\rangeslider.js"></script>
+<script src="js\jquery.mb.YTPlayer.js"></script>
+<script src="js\wow.min.js"></script>
+<script src="js\bootstrap-select.min.js"></script>
+<script src="js\jquery.easing.1.3.js"></script>
+<script src="js\jquery.scrollUp.js"></script>
+<script src="js\jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js\leaflet.js"></script>
+<script src="js\leaflet-providers.js"></script>
+<script src="js\leaflet.markercluster.js"></script>
+<script src="js\dropzone.js"></script>
+<script src="js\slick.min.js"></script>
+<script src="js\jquery.filterizr.js"></script>
+<script src="js\jquery.magnific-popup.min.js"></script>
+<script src="js\jquery.countdown.js"></script>
+<script src="js\maps.js"></script>
+<script src="js\app.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js\ie10-viewport-bug-workaround.js"></script>
+<!-- Custom javascript -->
+<script src="js\ie10-viewport-bug-workaround.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-89110077-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0N5pbJN10Y1oYFRd0MJ_v2g8W2QT74JE"></script>
+<script>
+    function LoadMap(propertes) {
+        var defaultLat = -22.9374629;
+        var defaultLng = -43.3352545;
+        var mapOptions = {
+            center: new google.maps.LatLng(defaultLat, defaultLng),
+            zoom: 15,
+            scrollwheel: false,
+            styles: [
+                {
+                    featureType: "administrative",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: "water",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: 'poi.business',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'labels.icon',
+                    stylers: [{visibility: 'off'}]
+                },
+            ]
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var infoWindow = new google.maps.InfoWindow();
+        var myLatlng = new google.maps.LatLng(-22.9374629, -43.3352545);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map
+        });
+        (function (marker) {
+            google.maps.event.addListener(marker, "click", function (e) {
+                infoWindow.setContent("" +
+                    "<div class='map-properties contact-map-content'>" +
+                    "<div class='map-content'>" +
+                    "<p class='address'>Avenida Salvador Allende, 3200 - Recreio dos Bandeirantes</p>" +
+                    "<ul class='map-properties-list'> " +
+                    "<li><i class='fa fa-phone'></i> </li> " +
+                    "<li><i class='fa fa-envelope'></i>  lubroque@gmail.com</li> " +
+                    "<li><a href='index.html'><i class='fa fa-globe'></i>  http://www.example.com</li></a> " +
+                    "</ul>" +
+                    "</div>" +
+                    "</div>");
+                infoWindow.open(map, marker);
+            });
+        })(marker);
+    }
+    LoadMap();
+</script>
+
+       
+    </form>
+</body>
+</html>
